@@ -1,0 +1,6 @@
+version: '2'
+services:
+  node-nodemon-express:
+    image: io.josefsson/docker-node-nodemon-express
+    build:
+      context: ./node-app

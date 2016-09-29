@@ -1,0 +1,6 @@
+# docker build -f Dockerfile.dev -t io.josefsson/docker-node-nodemon-express-dev .
+FROM io.josefsson/docker-node-nodemon-express
+RUN npm install -g nodemon
+ENV DEBUG_PORT 8081
+RUN npm config set example-server:debugport $DEBUG_PORT
+RUN npm config set example-server:startscript "nodemon -L --debug=$DEBUG_PORT --watch src src/js/server.js"

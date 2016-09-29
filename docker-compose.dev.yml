@@ -1,0 +1,12 @@
+version: '2'
+services:
+  node-nodemon-express:
+    image: io.josefsson/docker-node-nodemon-express-dev
+    build:
+      context: ./node-app/
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./node-app/src:/usr/app/src
+    ports:
+      - "8080:80"
+      - "8081:8081"

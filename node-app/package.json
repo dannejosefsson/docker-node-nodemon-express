@@ -1,0 +1,23 @@
+{
+  "name": "example-server",
+  "version": "0.0.1",
+  "description": "Example server",
+  "author": "Daniel Josefsson <daniel@josefsson.io>",
+  "license" : "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/npm/npm.git"
+  },
+  "main": "src/js/server.js",
+  "config": {
+    "port": "80",
+    "startscript": "node src/js/server.js"
+  },
+  "scripts": {
+    "start": "$npm_package_config_startscript"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "JSONStream": "^1.1.1"
+  }
+}
